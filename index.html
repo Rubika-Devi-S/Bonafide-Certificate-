@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bonafide Certificate Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Body styling */
+      /* Reset */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #fdfbfb, #e6e9f0, #d9a7c7, #fbc2eb);
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+}
+
+/* Background gradient animation */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glass container */
+.container {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 16px;
+  padding: 50px 40px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+}
+
+/* Title */
+.container h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #4b0082; /* Deep purple */
+  font-weight: 700;
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+  animation-delay: 0.3s;
+}
+
+/* Tagline */
+.container .tagline {
+  font-size: 16px;
+  color: #333;
+  margin: 10px 0 25px 0;
+  font-weight: 400;
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+  animation-delay: 0.6s;
+}
+
+/* Buttons */
+.container .button {
+  display: block;
+  width: 220px;
+  margin: 12px auto;
+  padding: 14px 20px;
+  background: #8b5cf6; /* Lavender purple */
+  color: #ffffff;
+  font-size: 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease forwards;
+}
+
+/* Sequential animation delay */
+.container .button:nth-of-type(1) { animation-delay: 1s; }
+.container .button:nth-of-type(2) { animation-delay: 1.3s; }
+.container .button:nth-of-type(3) { animation-delay: 1.6s; }
+
+/* Admin button */
+.container .button.admin {
+  background: #ec4899; /* Pink contrast */
+}
+.container .button.admin:hover {
+  background: #db2777;
+}
+
+/* Hover */
+.container .button:hover {
+  background: #6d28d9;
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+</style>
+
+</head>
+<body>
+  <div class="container">
+    <h1>Bonafide Certificate Generator</h1>
+    <p class="tagline"><b>One click, seamless and secure certificate management</b></p>
+    
+    <a href="login.php" class="button">Student Login</a>
+    <a href="register.php" class="button">Register</a>
+    <a href="admin_login.php" class="button admin">Admin Login</a>
+  </div>
+</body>
+</html>
+
+
